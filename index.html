@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Events</title></head>
+<body>
+  <h1>Upcoming Events</h1>
+  <a href="/add-event">Add New Event</a>
+  <ul>
+    {% for event in events %}
+      <li>
+        <strong>{{ event.title }}</strong> – {{ event.date }}<br>
+        {{ event.description }}<br>
+        <a href="/register/{{ event.id }}">Register</a>
+      </li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
