@@ -1,17 +1,51 @@
 <!DOCTYPE html>
 <html>
-<head><title>Events</title></head>
+<head>
+  <title>Events</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+    }
+    header {
+      background-color: rgb(98, 141, 245);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    h2 {
+      margin-left: 20px;
+    }
+    ul {
+      margin-left: 40px;
+    }
+  </style>
+</head>
 <body>
-  <h1>Upcoming Events</h1>
+  <!--Header-->
+  <header>
+    <h1>Upcoming Events</h1>
+  </header>
+
+  <h2>Model United Nations Conferences</h2>
   <a href="/add-event">Add New Event</a>
   <ul>
-    {% for event in events %}
-      <li>
-        <strong>{{ event.title }}</strong> – {{ event.date }}<br>
-        {{ event.description }}<br>
-        <a href="/register/{{ event.id }}">Register</a>
-      </li>
-    {% endfor %}
+    <li>Name and details of Organisation and Event</li>
+    <li>Date and Time</li>
+    <li>Expected delegate pool</li>
+    <li>Registration Fees</li>
+    <li><a href="#">Register Now</a></li>
+  </ul>
+
+  <h2>Sports Events</h2>
+  <ul>
+    <li>Name of Event and Organisation</li>
+    <li>Date and Time</li>
+    <li>Sports Name</li>
+    <li>Age Category</li>
+    <li>Registration Fees</li>
+    <li><a href="#">Register Now</a></li>
   </ul>
 </body>
 </html>
